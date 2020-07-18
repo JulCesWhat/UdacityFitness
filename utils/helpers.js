@@ -77,7 +77,7 @@ export function getMetricMetaInfo(metric) {
                 )
             }
         },
-        swin: {
+        swim: {
             displayName: 'Swin',
             max: 9900,
             unit: 'meters',
@@ -114,7 +114,7 @@ export function getMetricMetaInfo(metric) {
             getIcon() {
                 return (
                     <View>
-                        <MaterialCommunityIcons name="fod" color={"black"} size={35} />
+                        <MaterialCommunityIcons name="food" color={"black"} size={35} />
                     </View>
                 )
             }
@@ -122,4 +122,10 @@ export function getMetricMetaInfo(metric) {
     }
 
     return metric ? info[metric] : info;
+}
+
+export function getDailyReminderValue() {
+    return {
+        today: "Don't forget to log your day today."
+    };
 }
