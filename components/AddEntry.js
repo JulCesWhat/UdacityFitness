@@ -6,6 +6,7 @@ import UdaciStepper from './UdaciStepper';
 import DateHeader from './DateHeader';
 import { Ionicons } from '@expo/vector-icons';
 import TextButton from './TextButton';
+import { submitEntry, removeEntry } from '../utils/api';
 
 function SubmitBtn({onPress}) {
     return (
@@ -125,8 +126,8 @@ export default class AddEntry extends Component {
                                         ) : (
                                             <UdaciStepper
                                                 value={value}
-                                                onIncrement={() => this.increment(key)}
-                                                onDecrement={() => this.decrement(key)}
+                                                onIncrement={(key) => this.increment(key)}
+                                                onDecrement={(key) => this.decrement(key)}
                                                 {...rest} />
                                         )
                                 }
